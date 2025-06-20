@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: telegram-task-bot
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: node index.js
+    envVars:
+      - key: TELEGRAM_TOKEN
+        value: your-telegram-bot-token-here
+      - key: MONGO_URI
+        value: your-mongodb-connection-uri-here
